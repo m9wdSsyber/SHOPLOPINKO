@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر ألعاب إلكترونية</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="https://cdn.pixabay.com/video/2021/09/27/89894-616430996_large.mp4" type="video/mp4">
+        متصفحك لا يدعم الفيديو.
+    </video>
+
+    <!-- القائمة الرئيسية -->
+    <div class="menu-bar">
+        <button onclick="showGames()">الألعاب</button>
+        <button onclick="verifyAccess()">حسابات ستيم</button>
+        <button onclick="register()">التسجيل</button>
+        <button onclick="support()">الدعم الفني</button>
+    </div>
+
+    <!-- محتوى الألعاب -->
+    <div id="gamesContainer" style="display: none; padding-top: 60px;">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="ابحث عن لعبة...">
+            <button onclick="searchGames()">بحث</button>
+        </div>
+        <div id="gamesList">
+            <!-- الألعاب ستضاف هنا -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
